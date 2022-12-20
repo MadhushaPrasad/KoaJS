@@ -1,7 +1,8 @@
 const saveCustomer = async (req, res) => {
     console.log("saveCustomer");
     try {
-        res.status(201).send("Customer saved successfully");
+        res.status = 200;
+        res.body = "Customer saved successfully";
     } catch (e) {
         console.log(e);
     }
@@ -10,7 +11,8 @@ const saveCustomer = async (req, res) => {
 const updateCustomer = async (req, res) => {
     console.log("updateCustomer");
     try {
-        res.status(201).send("Customer updated successfully");
+        res.status = 200;
+        res.body = "Customer updated successfully";
     } catch (e) {
         console.log(e);
     }
@@ -19,7 +21,8 @@ const updateCustomer = async (req, res) => {
 const deleteCustomer = async (req, res) => {
     console.log("deleteCustomer");
     try {
-        res.status(201).send("Customer deleted successfully");
+        res.status = 200;
+        res.body = "Customer deleted successfully";
     } catch (e) {
         console.log(e);
     }
@@ -28,7 +31,8 @@ const deleteCustomer = async (req, res) => {
 const searchCustomer = async (req, res) => {
     console.log("searchCustomer");
     try {
-        res.status(201).send("Customer searched successfully and ID is " + req.body.id);
+        res.status = 200;
+        res.body = "Customer searched successfully and ID is " + req.body.id;
     } catch (e) {
         console.log(e);
     }
@@ -37,7 +41,8 @@ const searchCustomer = async (req, res) => {
 const getAllCustomers = async (req, res) => {
     console.log("getAllCustomers");
     try {
-        res.status(201).send("All customers");
+        res.status = 200;
+        res.body = "All customers";
     } catch (e) {
         console.log(e);
     }
