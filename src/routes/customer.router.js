@@ -27,7 +27,7 @@ router.delete('/delete', async (ctx) => {
     await deleteCustomer(ctx.request, ctx.response);
 });
 
-router.get('/search:id', async (ctx) => {
+router.get('/search/:id', async (ctx) => {
     await searchCustomer(ctx.request, ctx.response);
 });
 
