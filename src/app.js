@@ -5,5 +5,5 @@ const router = require('./routes/index.router')
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(8000, () => {
-    console.log('Server running at PORT 2400')
+    console.log('Server running at PORT 8000')
 })
