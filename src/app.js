@@ -1,8 +1,11 @@
 const koa = require('koa')
 const app = new koa()
-const router = require('./routes/index.router')
-app.use(router.routes()).use(router.allowedMethods());
 
+const indexRoutes = require('./routes/index.router')
+const customerRoutes = require('./routes/customer.router')
+
+app.use(indexRoutes.routes()).use(indexRoutes.allowedMethods());
+app.use(customerRoutes.routes()).use(customerRoutes.allowedMethods());
 
 
 app.listen(8000, () => {
