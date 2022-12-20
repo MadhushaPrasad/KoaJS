@@ -42,3 +42,11 @@ const getAllCustomers = async (req, res) => {
         console.log(e);
     }
 }
+
+module.exports = {
+    saveCustomer,
+    updateCustomer,
+    deleteCustomer,
+    searchCustomer,
+    getAllCustomers
+}
