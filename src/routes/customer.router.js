@@ -15,7 +15,7 @@ router.get('/', async (ctx) => {
     await getAllCustomers(ctx.request, ctx.response);
 });
 
-router.post('/customer', async (ctx) => {
+router.post('/create', async (ctx) => {
     await saveCustomer(ctx.request, ctx.response);
 });
 
