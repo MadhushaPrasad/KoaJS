@@ -4,6 +4,7 @@
   "description": "![1__SEhpSaIh7-l1jV-yFgeDQ](https://user-images.githubusercontent.com/50085447/206113113-e42e4f75-28a4-4b3d-9645-a37ce7d6c2ba.jpeg)",
   "main": "index.js",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MadhushaPrasad/KoaJS/issues"
   },
-  "homepage": "https://github.com/MadhushaPrasad/KoaJS#readme"
+  "homepage": "https://github.com/MadhushaPrasad/KoaJS#readme",
+  "dependencies": {
+    "koa": "^2.14.1"
+  }
 }
