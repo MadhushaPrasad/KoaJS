@@ -1,27 +1,34 @@
 const KoaRouter = require('koa-router');
+const {
+    deleteCustomer,
+    getAllCustomers,
+    saveCustomer,
+    updateCustomer,
+    searchCustomer
+} = require('./../controller/Customer.controller');
 
 const router = new KoaRouter();
 
 router.prefix("/customer")
 
 router.get('/', async (ctx) => {
-    ctx.body = 'Hello Customer';
+    await getAllCustomers(ctx.request, ctx.response);
 });
 
 router.post('/customer', async (ctx) => {
-    ctx.body = 'This is post API';
+    await saveCustomer(ctx.request, ctx.response);
 });
 
 router.put('/update', async (ctx) => {
-    ctx.body = 'This is put API';
+    await updateCustomer(ctx.request, ctx.response);
 });
 
 router.delete('/delete', async (ctx) => {
-    ctx.body = 'This is delete API';
+    await deleteCustomer(ctx.request, ctx.response);
 });
 
 router.get('/:id', async (ctx) => {
-    ctx.body = `This is search customer API and ID is ${ctx.request.body.id}`;
+    await searchCustomer(ctx.request, ctx.response);
 });
 
 
