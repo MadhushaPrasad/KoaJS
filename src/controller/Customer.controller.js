@@ -32,7 +32,7 @@ const searchCustomer = async (req, res) => {
     console.log("searchCustomer");
     try {
         res.status = 200;
-        res.body = "Customer searched successfully and ID is " + req.body.id;
+        res.body = "Customer searched successfully and ID is " + req.params.id;
     } catch (e) {
         console.log(e);
     }
