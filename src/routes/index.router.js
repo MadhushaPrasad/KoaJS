@@ -5,7 +5,7 @@ const router = new KoaRouter();
 router.prefix("/koaFund")
 
 router.get('/', async (ctx) => {
-    ctx.body = 'Hello World';
+    ctx.body = 'koaFund root API';
 });
 
 router.post('/create', async (ctx) => {

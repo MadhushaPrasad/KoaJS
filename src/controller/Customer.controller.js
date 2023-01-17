@@ -1,8 +1,8 @@
 const saveCustomer = async (req, res) => {
-    console.log("saveCustomer");
+    console.log("saveCustomer",req.body);
     try {
         res.status = 200;
-        res.body = "Customer saved successfully";
+        res.body = req.body;
     } catch (e) {
         console.log(e);
     }
