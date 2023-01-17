@@ -1,8 +1,24 @@
 const saveCustomer = async (req, res) => {
-  console.log("saveCustomer", req.body);
+  const customerList = {
+    customers: [
+      {
+        id: 1,
+        name: "John",
+        age: 25,
+      },
+      {
+        id: 2,
+        name: "Peter",
+        age: 30,
+      },
+    ],
+  };
   try {
+    if (req.body.id) {
+      customerList.customers.push(req.body);
+    }
     res.status = 200;
-    res.body = req.body;
+    res.body = customerList.customers;
   } catch (e) {
     console.log(e);
   }
